@@ -11,41 +11,51 @@ chatBtn.addEventListener('click', ()=>{
     popup.classList.toggle('show');
 })
 
-// send msg 
+
+// send message when click on submit button
 submitBtn.addEventListener('click', ()=>{
+
+
+	var aa = inputElm.value;
+	if( aa === ''){return false;}
+	else{
     let userInput = inputElm.value;
-
-var div = document.createElement("div");
-div.id="user1",
-
-div.innerHTML =`${userInput}`;
-chatArea.appendChild(div);
+    var div = document.createElement("div");
+    div.id="user1";
+    div.innerHTML =`${userInput}`;
+    chatArea.appendChild(div);
    // let temp = `<div id="user1">${userInput}</div>`;
 
    // chatArea.insertAdjacentHTML("beforeend", temp);
     inputElm.value = '';
-    chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
+    chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;}
 
-})
+});
 
 
+//sedn message when press the Enter
 document.addEventListener("DOMContentLoaded", () => {
+	
+
   const inputField = document.getElementById("userinput");
   inputField.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {
-      let userInput = inputElm.value;
+    	var bb = inputElm.value;
+	    if( bb === ''){return false;}
+	    else{
+	    	let userInput = inputElm.value;
 
-      var div = document.createElement("div");
-      div.id="user1",
-      div.innerHTML =`${userInput}`;
-      chatArea.appendChild(div);
+            var div = document.createElement("div");
+            div.id="user1",
+            div.innerHTML =`${userInput}`;
+            chatArea.appendChild(div);
    // let temp = `<div id="user1">${userInput}</div>`;
 
    // chatArea.insertAdjacentHTML("beforeend", temp);
-      inputElm.value = '';
-      chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
+            inputElm.value = '';
+            chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
       //addChat(input);
-    }
+    }}
   });
 });
 /*
