@@ -58,6 +58,86 @@ document.addEventListener("DOMContentLoaded", () => {
     }}
   });
 });
+
+
+
+var x = bot();
+
+function bot(){
+  
+  let botInputField = "Hi! I'm a Query Bot. Let me know if you have any questions regarding our university!"
+  var botDiv = document.createElement("div");
+  botDiv.id = "bot1";
+  botDiv.innerHTML =`${botInputField}`;
+  chatArea.appendChild(botDiv);
+  chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
+
+ // var botBtn = document.createElement("button");
+ // botBtn.id="botbutton";
+  var userInput = "Admissions";
+  let temp = `<button id="botbutton" onclick="sendAdmissionMsg()">${userInput}</button>`;
+
+  chatArea.insertAdjacentHTML("beforeend", temp);
+  //botBtn.innerHTML="Admissions";
+  //chatArea.appendChild(botBtn);
+
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="Student";
+  chatArea.appendChild(botBtn);
+
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="Faculty";
+  chatArea.appendChild(botBtn);
+
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="Academics";
+  chatArea.appendChild(botBtn);
+
+
+
+  chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
+}
+
+function sendAdmissionMsg(){
+  var admValue = "Admissions";
+  var div = document.createElement("div");
+  div.id="user1",
+  div.innerHTML =`${admValue}`;
+  chatArea.appendChild(div);
+  chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
+
+
+
+
+
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="New Updates";
+  chatArea.appendChild(botBtn);
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="How to Apply";
+  chatArea.appendChild(botBtn);
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="Important Dates";
+  chatArea.appendChild(botBtn);
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="Documents";
+  chatArea.appendChild(botBtn);
+  var botBtn = document.createElement("button");
+  botBtn.id="botbutton";
+  botBtn.innerHTML="College Website";
+  chatArea.appendChild(botBtn);
+  chatArea.scrollTop = chatArea.scrollHeight - chatArea.clientHeight;
+
+}
+
+
 /*
 
 function sendMsg(){
